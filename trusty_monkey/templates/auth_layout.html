@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<style>
+html, body {
+    height: 100%;
+    font-family: "Montserrat", serif;           
+}
+
+body {
+    background-image: url("{% static 'places/img/banana_palms.jpg' %}");
+    background-size: cover;
+}
+
+.login-form-container {
+    width: 300px;
+    margin: auto;
+    background-color: white;
+}
+
+.registration-form-container {
+    width: 400px;
+    margin: auto;
+    background-color: white;
+}
+
+.auth-box {            
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width:500px;
+    margin:auto;
+    background-color: white;
+}
+</style>
+{% endblock %}
+
+{% block content %}    
+<div class="auth-box text-center mt-5">
+    {% block auth %}
+    
+    {% endblock %}
+</div>
+{% endblock %}
